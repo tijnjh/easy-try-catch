@@ -1,8 +1,20 @@
 # easy-try-catch
 
-simple tryCatch util function for both sync and async
+Simple tryCatch util function for both sync and async
 
-## examples
+## Usage
+
+```sh
+npm i easy-try-catch
+```
+
+or
+
+```sh
+yarn add easy-try-catch
+```
+
+## Examples
 
 ```js
 // sync
