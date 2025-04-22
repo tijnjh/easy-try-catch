@@ -2,6 +2,10 @@
 
 Simple tryCatch util function for both sync and async
 
+> [!IMPORTANT]  
+> This function is now part of https://tijn.dev/tsuite
+
+
 ## Usage
 
 ```sh

@@ -40,6 +40,10 @@
  *     console.log("Promise succeeded:", result);
  *   }
  * });
+ * 
+ * 
+ * @deprecated
+ * This function is now part of https://tijn.dev/tsuite
  */
 function tryCatch<T, E = Error>(
   input: (() => T) | Promise<T>
