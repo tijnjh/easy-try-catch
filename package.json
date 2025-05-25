@@ -1,20 +1,20 @@
 {
   "name": "easy-try-catch",
-  "version": "0.0.35-1",
-  "main": "index.js",
+  "type": "module",
+  "version": "0.1.0",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsdown"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://codeberg.org/tijn/easy-try-catch"
-  },
-  "author": "tijn",
+  "author": "tijnjh",
+  "authors": [
+    "Tijn/Jonas <tijn@tijn.dev>"
+  ],
+  "repository": "tijnjh/easy-try-catch",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@types/node": "^22.13.9",
+    "tsdown": "^0.12.3",
     "typescript": "^5.8.2"
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  }
 }
