@@ -1,10 +1,16 @@
 {
   "name": "easy-try-catch",
   "type": "module",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "index.js",
+  "scripts": {
+    "declare": "tsc index.js --allowJs --declaration --emitDeclarationOnly"
+  },
   "author": "tijnjh",
   "license": "ISC",
   "repository": "tijnjh/easy-try-catch",
-  "description": "Simple tryCatch util function for both sync and async"
+  "description": "Simple tryCatch util function for both sync and async",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
 }
