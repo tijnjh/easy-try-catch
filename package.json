@@ -23,6 +23,5 @@
   "files": [
     "dist"
   ],
-  "private": true,
   "types": "./dist/index.d.ts"
 }
