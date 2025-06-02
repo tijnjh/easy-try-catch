@@ -1,23 +1,21 @@
-# easy-try-catch
+# typecatch
 
-Simple tryCatch util function for both sync and async
+Simple TypeScript tryCatch util function for both sync and async
 
 ## Installation
 
 ```sh
-npm i easy-try-catch
+npm i typecatch
 ```
 
 ## Usage
 
-### Function:
+```ts
+import { tryCatch } from "typecatch";
 
-```js
+// function:
 const { data, error } = tryCatch(() => JSON.parse(/* ... */));
-```
 
-### Promise
-
-```js
+// promise:
 const { data, error } = await tryCatch(fetch(/* ... */));
 ```
