@@ -3,19 +3,19 @@ function tryCatch(input) {
 	if (typeof input === "function") try {
 		return {
 			data: input(),
-			error: null
+			error: void 0
 		};
 	} catch (error) {
 		return {
-			data: null,
+			data: void 0,
 			error
 		};
 	}
 	if (input instanceof Promise) return input.then((data) => ({
 		data,
-		error: null
+		error: void 0
 	})).catch((error) => ({
-		data: null,
+		data: void 0,
 		error
 	}));
 	throw new Error("Input must be a function or a promise.");

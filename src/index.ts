@@ -1,10 +1,10 @@
 interface Success<T> {
   data: T;
-  error: null;
+  error: undefined;
 }
 
 interface Failure<E> {
-  data: null;
+  data: undefined;
   error: E;
 }
 
@@ -13,14 +13,14 @@ type Result<T, E> = Success<T> | Failure<E>;
 /**
  * Executes a function and returns a result object containing either the data or an error.
  * @param fn A function to execute.
- * @returns A result object with either `data` and `error: null`, or `data: null` and `error`.
+ * @returns A result object with either `data` and `error: undefined`, or `data: undefined` and `error`.
  */
 export function tryCatch<T, E = Error>(fn: () => T): Result<T, E>;
 
 /**
  * Executes a promise and returns a promise that resolves to a result object containing either the data or an error.
  * @param promise A promise to execute.
- * @returns A promise that resolves to a result object with either `data` and `error: null`, or `data: null` and `error`.
+ * @returns A promise that resolves to a result object with either `data` and `error: undefined`, or `data: undefined` and `error`.
  */
 export function tryCatch<T, E = Error>(
   promise: Promise<T>,
@@ -31,9 +31,9 @@ export function tryCatch<T, E = Error>(
 ): Result<T, E> | Promise<Result<T, E>> {
   if (typeof input === "function") {
     try {
-      return { data: input(), error: null };
+      return { data: input(), error: undefined };
     } catch (error) {
-      return { data: null, error: error as E };
+      return { data: undefined, error: error as E };
     }
   }
 
@@ -42,12 +42,12 @@ export function tryCatch<T, E = Error>(
       .then(
         (data): Success<T> => ({
           data: data,
-          error: null,
+          error: undefined,
         }),
       )
       .catch(
         (error): Failure<E> => ({
-          data: null,
+          data: undefined,
           error: error as E,
         }),
       );
