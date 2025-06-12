@@ -1,14 +1,14 @@
 {
   "name": "typecatch",
   "type": "module",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch"
   },
   "author": "tijnjh",
-  "license": "MPL-2.0",
+  "license": "MIT",
   "repository": "tijnjh/typecatch",
   "description": "Simple TypeScript tryCatch util function for both sync and async",
   "module": "./dist/index.js",
